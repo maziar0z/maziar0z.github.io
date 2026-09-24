@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Industry | Maziar Zamanpour</title>
+  <meta name="description" content="Maziar Zamanpour at Bio-Techne: root-cause analytics and predictive modeling for on-time delivery in operations and supply chain.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="signal"><i></i><i></i><i></i></span> Maziar Zamanpour</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="industry.html" aria-current="page">Industry</a></li>
+        <li><a href="ventures.html">Entrepreneurship</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap feature">
+      <div>
+        <p class="eyebrow">Bio-Techne · Operations &amp; Supply Chain · May 2026 – present</p>
+        <h1>Promise to delivery.</h1>
+        <p class="lead">
+          As a Graduate Data Analyst Intern on the Strategic Supply Chain team, I worked on one question with two halves:
+          <b>why did past orders miss their promise date, and which open orders are about to?</b>
+        </p>
+        <div class="meta">
+          <span>SQL Server</span><span>Power BI &amp; DAX</span><span>Python</span><span>Databricks</span><span>SAP ERP/MRP</span>
+        </div>
+      </div>
+      <figure>
+        <img src="images/biotechne-talk.jpg" alt="Maziar presenting 'Promise to Delivery: Understanding the past, predicting the future' at Bio-Techne">
+        <figcaption>Presenting "Promise to Delivery: Understanding the past, predicting the future" at Bio-Techne, summer 2026.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ THE BUSINESS PROBLEM ============ -->
+  <section>
+    <div class="wrap feature flip">
+      <figure>
+        <img src="images/biotechne-otd.jpg" alt="Maziar explaining where the on-time delivery analysis started">
+        <figcaption>Where we started: every miss was reviewed by hand, and planning and manufacturing were largely a black box.</figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow">The business problem</p>
+        <h2>On-time delivery is a promise to the customer.</h2>
+        <p>For a life-sciences supplier, a late order means a researcher or clinician is left waiting. The team reviewed every missed order by hand
+          and had made real progress. But planning and manufacturing make up a large share of fulfillment, and the data showed almost nothing
+          about what went wrong inside them.</p>
+        <p>So I started by learning the operation rather than the tables. I followed how an order moves through planning, production, QC and shipping,
+          and I learned who owns each step. Only then did I decide what "root cause" should mean in the data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I BUILT ============ -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">What I built</p>
+      <h2>Understanding the past, predicting the future</h2>
+      <div class="grid-2" style="margin-top:28px">
+        <div class="card">
+          <span class="num">Past</span>
+          <h3>Automated root-cause attribution</h3>
+          <p>I built a SQL and Power BI pipeline that assigns each on-time-delivery miss to its delay category: production, QC, planning, lead time or shipping.
+            It replaced manual order-by-order review with attribution that is consistent and auditable.</p>
+        </div>
+        <div class="card">
+          <span class="num">Past</span>
+          <h3>Rebuilding history the ERP never stored</h3>
+          <p>You can't blame a stockout without knowing what was actually on the shelf that day. I rebuilt historical on-hand inventory
+            from ERP/MRP transactions so that every late order could be judged against the stock that existed at the time.</p>
+        </div>
+        <div class="card">
+          <span class="num">Present</span>
+          <h3>Decision tools for planners</h3>
+          <p>I built a historical stock lookup, demand profiles, lead-time benchmarks and a forward stock projection for backlog orders.
+            They also flag production and QC steps that are already running late on live orders. Planners and supply chain directors use them directly.</p>
+        </div>
+        <div class="card">
+          <span class="num">Future</span>
+          <h3>Predicting the next miss</h3>
+          <p>I built machine-learning models in Python on Databricks that forecast demand and OTD-miss risk. They flag at-risk open orders
+            before the promise date and inform stock policy, so the team moves from explaining misses to preventing them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MESSY DATA + IMPACT ============ -->
+  <section>
+    <div class="wrap feature">
+      <div>
+        <p class="eyebrow">Big, messy data</p>
+        <h2>Most of the work is making the data trustworthy.</h2>
+        <p>ERP data records what the system was told, not always what happened. Along the way I found and fixed systemic data-quality and
+          integrity gaps. Those fixes made the planning and inventory analytics reliable enough for leaders to act on.</p>
+        <ul class="check">
+          <li>Built composite keys and calculated tables in DAX to join data at different grains across sales, production and inventory</li>
+          <li>Built the delay-attribution logic on finished orders with validated on-time labels, so the results can be checked against ground truth</li>
+          <li>Automated dataset refreshes with Power Automate so reports stay current without manual work</li>
+          <li>Set up a Databricks catalog as the team began migrating to the lakehouse</li>
+        </ul>
+      </div>
+      <div class="photos">
+        <div class="callout">
+          My work contributed to a major improvement in on-time delivery. The tools are used by the people who make the stocking and scheduling decisions.
+          <small>Impact</small>
+        </div>
+        <div class="card">
+          <h3>Why this matters for an OR / DS role</h3>
+          <p class="muted" style="margin:0">This is the full loop: define the business question, get messy enterprise data under control, build explanatory and predictive models,
+            and put them in front of decision-makers in a form they'll use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Want to hear the full story?</h2>
+      <p class="lead">I'm happy to walk through the approach and the modeling choices in more detail.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:zaman050@umn.edu">Get in touch</a>
+        <a class="btn" href="ventures.html">Next: Entrepreneurship →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Maziar Zamanpour</span>
+    <span><a href="https://www.linkedin.com/in/maziar-zamanpour/">LinkedIn</a> · <a href="https://github.com/maziar0z">GitHub</a> · <a href="https://scholar.google.com/citations?user=FerIoSUAAAAJ&amp;hl=en">Scholar</a> · <a href="mailto:zaman050@umn.edu">Email</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

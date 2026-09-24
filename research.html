@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Maziar Zamanpour</title>
+  <meta name="description" content="Ph.D. research by Maziar Zamanpour: optimization, model predictive control and machine learning for connected vehicles at signalized intersections.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="signal"><i></i><i></i><i></i></span> Maziar Zamanpour</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" aria-current="page">Research</a></li>
+        <li><a href="industry.html">Industry</a></li>
+        <li><a href="ventures.html">Entrepreneurship</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Ph.D. Research · University of Minnesota</p>
+      <h1>Optimizing the few seconds before a traffic light.</h1>
+      <p class="lead">
+        My dissertation uses vehicle connectivity and traffic-flow models to make signalized intersections safer and more
+        energy-efficient. It is operations research applied to a real-time system: predict what happens next, optimize a decision,
+        and deliver it to a driver or an automated vehicle fast enough to matter.
+      </p>
+      <div class="meta">
+        <span>Ph.D., Civil Engineering (Transportation) + Industrial Engineering minor</span>
+        <span>Advisor: Prof. Michael W. Levin</span>
+        <span>GPA 3.7</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLAGSHIP PROJECT ============ -->
+  <section>
+    <div class="wrap feature">
+      <div>
+        <p class="eyebrow">Flagship project</p>
+        <h2>A red-light running warning system, tested on public roads</h2>
+        <div class="psr">
+          <div><b>Problem</b>Red-light running causes severe crashes, and a fixed yellow light gives every driver the same warning even though drivers behave differently.</div>
+          <div><b>Solution</b>I developed the system's core program. It combines live signal phase and timing (SPaT) and intersection geometry (MAP) with each vehicle's real-time position and speed. A model-predictive controller then tells the driver, through a green, yellow or red in-vehicle display, whether to proceed or brake and how hard.</div>
+          <div><b>Result</b>After a single-intersection pilot, the system ran at five connected intersections in Shakopee, MN, with everyday drivers in live traffic. The University of Minnesota called it the largest live road test of its kind. The work is published in the <i>ASCE Journal of Transportation Engineering</i> and a MnDOT report.</div>
+        </div>
+        <p><b>Under the hood:</b> individual driver models (IDM) calibrated by gradient descent with Armijo backtracking, iterative learning control
+          to adapt parameters to each driver, an unscented Kalman filter for state estimation, V2X message decoding (BSM, SPaT, MAP) over UDP,
+          and SUMO/TraCI simulation for testing before field trials.</p>
+        <p><a href="https://github.com/maziar0z/ILC-RLRWS">Code on GitHub →</a></p>
+      </div>
+      <div class="photos">
+        <div class="callout">
+          "Personalized warnings based on how each person actually drives, not one yellow light for everyone."
+          <small>The design principle behind the system</small>
+        </div>
+        <div class="press">
+          <a href="https://cse.umn.edu/cege/news/moving-end-persistent-problem-red-light-running">
+            Moving to end the persistent problem of red-light running
+            <small>UMN College of Science &amp; Engineering news</small>
+          </a>
+          <a href="https://mntransportationresearch.org/2024/08/12/introducing-a-new-red-light-running-warning-system-that-can-potentially-reduce-human-errors-at-intersections/">
+            A new red-light running warning system that can reduce human error at intersections
+            <small>Minnesota Transportation Research blog, Aug 2024</small>
+          </a>
+          <a href="https://cse.umn.edu/cege/feature-stories/grad-research-experience-maziar-zamanpour-transportation">
+            Grad research experience: Maziar Zamanpour
+            <small>UMN CEGE feature story</small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OTHER PROJECTS ============ -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">More research</p>
+      <h2>From one vehicle to a whole city network</h2>
+      <div class="grid-2" style="margin-top:28px">
+        <div class="card">
+          <h3>Energy-efficient speed control with lane-change prediction</h3>
+          <p>I built a supervised machine-learning pipeline that predicts lane changes from vehicle trajectory data. Its predictions feed an
+            energy-optimal speed controller for connected automated vehicles, so the vehicle plans around the cars that are about to cut in.</p>
+          <p class="muted">Published in Transportation Research Part C (2025).</p>
+        </div>
+        <div class="card">
+          <h3>City-scale energy impact of eco-driving automated vehicles</h3>
+          <p>I modified a link transmission model with dynamic traffic assignment to capture eco-approach automated vehicles in mixed platoons,
+            then predicted how they change energy use and route choice across an urban network.</p>
+          <p class="muted">Presented at INFORMS Annual Meeting 2025. <a href="https://github.com/maziar0z/AVDTA_CAVs">Code</a></p>
+        </div>
+        <div class="card">
+          <h3>How accurate are our traffic models, really?</h3>
+          <p>I benchmarked traffic-flow models against pNEUMA, a large drone-recorded dataset of real vehicle trajectories. The question was
+            how much each model's accuracy can be trusted when it drives real decisions.</p>
+        </div>
+        <div class="card">
+          <h3>Eco-speed advice for human drivers</h3>
+          <p>I extended the controller to ordinary connected cars. Adaptive driver-model calibration combined with MPC produces speed suggestions
+            that a person can realistically follow, saving energy without automation.</p>
+        </div>
+        <div class="card">
+          <h3>Cost–benefit analysis for MnDOT</h3>
+          <p>I evaluated whether connected-corridor deployment pays off. The analysis showed payback within three years, and it informed
+            MnDOT's deployment decisions.</p>
+          <p class="muted">MnDOT Report 2023-06.</p>
+        </div>
+        <div class="card">
+          <h3>Side projects in OR</h3>
+          <p><b>Delivery dispatch optimization (2025).</b> I formulated DoorDash-style driver–order assignment as a MIP in Gurobi, plus a greedy heuristic for real-time dynamic assignment.<br>
+            <b>Pedestrian network design.</b> I optimized which walkways to build to maximize accessibility. <a href="https://github.com/maziar0z/Pedestrian-network-design-">Code</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS + TALKS ============ -->
+  <section>
+    <div class="wrap feature flip">
+      <div class="photos">
+        <figure>
+          <img src="images/informs-poster.jpg" alt="Maziar next to his poster at INFORMS 2025">
+          <figcaption>Presenting my link transmission model of eco-approach automated vehicles at the INFORMS Annual Meeting, 2025.</figcaption>
+        </figure>
+        <div class="grid-2" style="gap:16px">
+          <figure>
+            <img src="images/huber-award.jpg" alt="Maziar holding the 2024 Matthew J. Huber Award plaque" style="aspect-ratio:3/4;object-fit:cover">
+            <figcaption>2024 Matthew J. Huber Award, Center for Transportation Studies.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/informs-2025.jpg" alt="Maziar at the INFORMS 2025 Annual Meeting" style="aspect-ratio:3/4;object-fit:cover">
+            <figcaption>INFORMS Annual Meeting, 2025.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Recognition</p>
+        <h2>Awards &amp; talks</h2>
+        <ul class="timeline compact">
+          <li>
+            <span class="when">2024</span>
+            <div><h3>Matthew J. Huber Award</h3>
+              <p class="muted">Given by the UMN Center for Transportation Studies to graduate students for outstanding academic achievement.
+                I received it while I was defending my M.S. thesis, running the MnDOT red-light warning project and teaching a new course.
+                <a href="https://www.cts.umn.edu/news-pubs/news/2024/may/awards">Announcement</a></p></div>
+          </li>
+          <li>
+            <span class="when">2023, 2025</span>
+            <div><h3>TRB Travel Awards (×2)</h3>
+              <p class="muted">Transportation Research Board Annual Meeting, Washington, DC.</p></div>
+          </li>
+          <li>
+            <span class="when">Talks</span>
+            <div><h3>INFORMS · TRB · ITS Minnesota · CTS</h3>
+              <p class="muted">I've presented at the INFORMS Annual Meeting, the TRB Annual Meeting, ITS Minnesota and the UMN Center for Transportation Studies.
+                I took UMN's "Storytelling for Engineers" course on purpose: a model only has impact if you can explain it.</p></div>
+          </li>
+          <li>
+            <span class="when">2024 – 2025</span>
+            <div><h3>Course Instructor, Statistics &amp; Probability</h3>
+              <p class="muted">I taught probability, distributions, point estimation, regression, Bayesian methods, causal inference and forecasting.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Publications</p>
+      <h2>Selected papers &amp; reports</h2>
+      <p class="muted">7 publications: 3 peer-reviewed journal papers, 2 state DOT reports and 2 under review.
+        Full list on <a href="https://scholar.google.com/citations?user=FerIoSUAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+      <ol class="pubs" style="margin-top:20px">
+        <li><b>Zamanpour, M.</b>, He, S., Levin, M. W., &amp; Sun, Z. (2025). Incorporating lane-change prediction into energy-efficient speed control of connected autonomous vehicles at intersections.
+          <span class="venue">Transportation Research Part C: Emerging Technologies</span>, 171, 104968.</li>
+        <li>He, S., <b>Zamanpour, M.</b>, Guo, J., Sun, Z., et al. (2026). Traffic prediction-based individualized driver warning system to reduce red light violations.
+          <span class="venue">Journal of Transportation Engineering, Part A: Systems</span>, 152(3). <a href="https://doi.org/10.1061/JTEPBS.TEENG-9171">DOI</a></li>
+        <li>Guo, J., Wang, S., He, S., Sun, Z., <b>Zamanpour, M.</b>, et al. (2026). Energy-efficient control of connected autonomous electric vehicles in mixed traffic with human-driven vehicles.
+          <span class="venue">Transportation Research Record</span>.</li>
+        <li>Levin, M. W., Sun, Z., He, S., <b>Zamanpour, M.</b>, &amp; Guo, J. (2024). Development and demonstration of a novel red light running warning system using connected V2I technology.
+          <span class="venue">Minnesota Department of Transportation</span>, Report 2024-33. <a href="https://mdl.mndot.gov/items/202433">Report</a></li>
+        <li>Levin, M. W., Sun, Z., Wang, S., Sun, W., He, S., Suh, B., Zhao, G., Margolis, J., &amp; <b>Zamanpour, M.</b> (2023). Cost/benefit analysis of fuel-efficient speed control using signal phasing and timing (SPaT) data.
+          <span class="venue">Minnesota Department of Transportation</span>, Report 2023-06.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Education</p>
+      <h2>Background</h2>
+      <ul class="timeline" style="margin-top:20px">
+        <li><span class="when">2023 – Jan 2027</span>
+          <div><h3>Ph.D., Civil Engineering: Transportation, with an Industrial Engineering minor</h3>
+            <p class="muted">University of Minnesota · GPA 3.7 · Coursework: Optimization for ML, Optimization for Data Science, Production &amp; Inventory Systems, Decision Analysis</p></div></li>
+        <li><span class="when">2022 – 2023</span>
+          <div><h3>M.S., Civil Engineering: Transportation</h3>
+            <p class="muted">University of Minnesota · Thesis on optimal speed control for connected and automated vehicles at traffic signals</p></div></li>
+        <li><span class="when">2018 – 2022</span>
+          <div><h3>B.S., Civil Engineering</h3>
+            <p class="muted">University of Tehran · GPA 3.7</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Maziar Zamanpour</span>
+    <span><a href="https://www.linkedin.com/in/maziar-zamanpour/">LinkedIn</a> · <a href="https://github.com/maziar0z">GitHub</a> · <a href="https://scholar.google.com/citations?user=FerIoSUAAAAJ&amp;hl=en">Scholar</a> · <a href="mailto:zaman050@umn.edu">Email</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
